@@ -22,4 +22,4 @@
 4) web tool
  install es-head tool:
  * plugin -install mobz/elasticsearch-head
- * http://localhost:9200
+ * http://localhost:9200/_plugin/head
