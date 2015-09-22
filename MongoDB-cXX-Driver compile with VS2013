@@ -8,11 +8,13 @@
   * http://www.scons.org/download/scons-2.3.6-setup.exe
   * Add C:\Python27\Scripts to system env PATH
 
-4. git clone -b legacy https://github.com/mongodb/mongo-cxx-driver.git
+4. git clone -b legacy https://github.com/mongodb/mongo-cxx-driver.git      or
+   git clone -b 26compat https://github.com/mongodb/mongo-cxx-driver.git
 
 5. cd mongo-cxx-driver
   * Open CMD in this folder
-  * scons install --cpppath=D:\boost_1_58_0 --libpath=D:\boost_1_58_0\lib32-msvc-12.0  --dbg=on --32 --dynamic-windows --sharedclient
+  * For legacy branch: scons install --cpppath=D:\boost_1_58_0 --libpath=D:\boost_1_58_0\lib32-msvc-12.0  --dbg=on --32 --dynamic-windows --sharedclient
+  * For 26compat branch: scons --cpppath=D:\boost_1_58_0 --libpath=D:\boost_1_58_0\lib32-msvc-12.0  --dbg=on --32 --dynamic-windows --sharedclient --use-system-boost
   
 6. git clone -b msvc https://github.com/Climax777/mongo-cxx-pool.git
   * Open CMakeLists.txt to CMake-GUI (2.8.12.2)
