@@ -1,0 +1,9 @@
+issues and solutions:
+
+  * scoped connection to 127.0.0.1:27017 not being returned to the pool
+    * ScopedDbConnection is nonacopyable, declare a object within the called function scope or create it with following:
+        auto_ptr<mongo::ScopedDbConnection> scopeConn(new mongo::ScopedDbConnection("127.0.0.1:27017"));
+        return scopeConn;
+  
+  * Assertion: 13548:BufBuilder attempted to grow() to 134217728 bytes, past the 64MB limit.
+    * d
